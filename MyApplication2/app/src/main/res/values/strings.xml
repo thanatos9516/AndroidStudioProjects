@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Hola Mundo</string>
+    <string name="action_settings">Settings</string>
+    <string name="edit_message">Enter message</string>
+    <string name="button_send" translatable="false">Enviar</string>
+    <string name="txtMensaje">txtMensaje</string>
+</resources>
