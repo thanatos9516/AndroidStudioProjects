@@ -9,9 +9,7 @@ import android.widget.TextView;
 
 import java.util.List;
 
-/**
- * Created by Thanatos on 5/3/2018.
- */
+
 
 public class FrameworkAdapter extends RecyclerView.Adapter<FrameworkAdapter.FrameworkViewHolder>
 {
@@ -26,8 +24,7 @@ public class FrameworkAdapter extends RecyclerView.Adapter<FrameworkAdapter.Fram
     public
     FrameworkViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         View v = LayoutInflater.from(parent.getContext())
-                .inflate(R.layout.framework_cardview, parent, false
-                );
+                .inflate(R.layout.framework_cardview, parent, false);
         return new
                 FrameworkViewHolder(v);
     }
@@ -37,7 +34,7 @@ public class FrameworkAdapter extends RecyclerView.Adapter<FrameworkAdapter.Fram
         holder.imagen.setImageResource(items.get(position).getImagen());
         holder.nombre.setText(items.get(position).getNombre());
         holder.visitas.setText("Visitas:" +
-                                String.valueOf(items.get(position).getValoracion()));
+                String.valueOf(items.get(position).getValoracion()));
     }
 
     @Override

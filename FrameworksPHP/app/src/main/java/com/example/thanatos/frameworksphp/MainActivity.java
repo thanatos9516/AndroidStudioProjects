@@ -4,11 +4,15 @@ import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -23,7 +27,7 @@ public class MainActivity extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-       FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
+        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -31,6 +35,29 @@ public class MainActivity extends AppCompatActivity {
                         .setAction("Action", null).show();
             }
         });
+
+        /* Declarar instancias globales */
+
+
+        List items = new ArrayList();
+
+        items.add(new Framework("CakePHP", 230,R.drawable.cake));
+        items.add(new Framework("Laravel",456,R.drawable.laravel));
+        items.add(new Framework("Symfony", 342,R.drawable.symfony));
+        items.add(new Framework("Yii", 645,R.drawable.yii));
+
+// Obtener el Recycler
+        recycler = (RecyclerView) findViewById(R.id.reciclador);
+        recycler.setHasFixedSize(true);
+
+// Usar un administrador para LinearLayout
+        lManager = new LinearLayoutManager(this);
+        recycler.setLayoutManager(lManager);
+
+// Crear un nuevo adaptador
+        adapter = new FrameworkAdapter(items);
+        recycler.setAdapter(adapter);
+
     }
 
     @Override
