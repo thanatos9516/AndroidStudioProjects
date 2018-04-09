@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/fondo">
+
+    <ImageView
+        android:id="@+id/imageman"
+        android:layout_width="161dp"
+        android:layout_height="161dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="top|center"
+        android:layout_marginTop="34dp"
+        android:background="@drawable/man" />
+
+    <EditText
+        android:id="@+id/txtUsuarioLogin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:ems="10"
+        android:hint="User"
+        android:inputType="textPersonName" />
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPassword"
+        android:hint="*******"
+        android:ems="10"
+        android:id="@+id/txtClaveLogin"
+        android:layout_below="@+id/txtUsuarioLogin"
+        android:layout_alignLeft="@+id/txtUsuarioLogin"
+        android:layout_alignStart="@+id/txtUsuarioLogin" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Ingresar"
+        android:id="@+id/btnIngresar"
+        android:layout_below="@+id/txtClaveLogin"
+        android:layout_alignLeft="@+id/txtClaveLogin"
+        android:layout_alignStart="@+id/txtClaveLogin"
+        android:layout_alignRight="@+id/txtClaveLogin"
+        android:layout_alignEnd="@+id/txtClaveLogin" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Registrarse"
+        android:id="@+id/btnRegistrar"
+        android:layout_alignRight="@+id/btnIngresar"
+        android:layout_alignEnd="@+id/btnIngresar"
+        android:layout_below="@+id/btnIngresar"
+        android:layout_alignLeft="@+id/btnIngresar"
+        android:layout_alignStart="@+id/btnIngresar" />
+</RelativeLayout>

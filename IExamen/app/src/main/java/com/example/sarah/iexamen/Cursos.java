@@ -22,7 +22,7 @@ public class Cursos extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_cursos);
 
-        lista= (ListView)findViewById(R.id.lisCursos);
+        lista= (ListView)findViewById(R.id. lisCursos);
         mostrarCursos();
     }
 

@@ -2,23 +2,24 @@ package com.example.thanatos.examen1;
 
 import android.content.Intent;
 import android.database.Cursor;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.view.Menu;
-import android.view.MenuItem;
+import android.provider.ContactsContract;
+import android.support.v7.app.AppCompatActivity;
+import android.view.View;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ListView;
+import android.widget.Toast;
+
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * Created by Thanatos on 8/4/2018.
- */
-
 public class Cursos extends AppCompatActivity {
+    private Button btnGuardar;
+    DataBaseHelper helper = new DataBaseHelper(this);
 
     ListView lista;
-    // SQLite_OpenHelper helper= new SQLite_OpenHelper(getApplicationContext());
     List<String> item=null;
 
     @Override
@@ -28,11 +29,35 @@ public class Cursos extends AppCompatActivity {
 
         lista= (ListView)findViewById(R.id.lisCursos);
         mostrarCursos();
+
+        btnGuardar= (Button) findViewById(R.id.btnCurso);
+        btnGuardar.setOnClickListener(new View.OnClickListener() {
+
+            public void onClick(View v) {
+                String txtNombreCurso = ((EditText) findViewById(R.id.txtCurso)).getText().toString();
+
+
+                if (txtNombreCurso.equals("")) {
+                    Toast.makeText(getApplicationContext(), "Complete los espacios en blanco", Toast.LENGTH_SHORT).show();
+                } else {
+                    Boolean comprobante = helper.ingresarCurso(txtNombreCurso);
+                    if (comprobante) {
+                        Curso curso = new Curso();
+                        curso.setNombreCurso(txtNombreCurso);
+                        Intent exito = new Intent(Cursos.this, Inicio.class);
+                        exito.putExtra("Usuario", txtNombreCurso);
+                        startActivity(exito);
+                    } else {
+                        Toast error = Toast.makeText(Cursos.this, "Ocurrio un error", Toast.LENGTH_SHORT);
+                        error.show();
+                    }
+                }
+            }
+        });
     }
 
     private void mostrarCursos(){
-        SQLite_OpenHelper helper= new SQLite_OpenHelper(this);
-        Cursor c= helper.getCursor();
+        Cursor c = helper.getCursor();
         item = new ArrayList<String>();
         String nombre="";
         if(c.moveToFirst()){
@@ -43,39 +68,10 @@ public class Cursos extends AppCompatActivity {
             }while(c.moveToNext());
 
         }
-        ArrayAdapter<String>adaptador= new ArrayAdapter<String>(this,android.R.layout.simple_list_item_1,item);
+        ArrayAdapter<String> adaptador= new ArrayAdapter<String>(this,android.R.layout.simple_list_item_1,item);
         lista.setAdapter(adaptador);
 
 
 
     }
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.activity_menu, menu);
-        return true;
-    }
-
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        switch (item.getItemId()) {
-
-            case R.id.Estudiantes:
-                Intent exito = new Intent(Cursos.this, com.example.thanatos.examen1.List.class);
-                startActivity(exito);
-                return true;
-            case R.id.cambiar_clave:
-                exito = new Intent(Cursos.this, Clave.class);
-                startActivity(exito);
-                return true;
-            case R.id.salir:
-                exito = new Intent(Cursos.this, Login.class);
-                startActivity(exito);
-                return true;
-            default:
-                return super.onOptionsItemSelected(item);
-        }
-    }
-
 }
-

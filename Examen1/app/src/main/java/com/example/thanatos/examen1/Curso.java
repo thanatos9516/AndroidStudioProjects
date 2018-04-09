@@ -1,17 +1,14 @@
 package com.example.thanatos.examen1;
 
-/**
- * Created by Thanatos on 8/4/2018.
- */
 
 public class Curso {
     private int idCurso;
-    private String nombre;
+    private String nombreCurso;
 
     public Curso(){}
-    public Curso(int idCurso, String nombre) {
+    public Curso(int idCurso, String nombreCurso) {
         this.idCurso=idCurso;
-        this.nombre=nombre;
+        this.nombreCurso=nombreCurso;
     }
 
     public int getIdCurso() {
@@ -22,11 +19,11 @@ public class Curso {
         this.idCurso = idCurso;
     }
 
-    public String getNombre() {
-        return nombre;
+    public String getNombreCurso() {
+        return nombreCurso;
     }
 
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
+    public void setNombreCurso(String nombreCurso) {
+        this.nombreCurso = nombreCurso;
     }
 }

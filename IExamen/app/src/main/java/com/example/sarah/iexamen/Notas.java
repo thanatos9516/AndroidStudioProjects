@@ -9,6 +9,7 @@ import android.widget.ListView;
 import java.util.*;
 
 public class Notas extends AppCompatActivity {
+    SQLite_OpenHelper helper= new SQLite_OpenHelper(this);
     ListView lista;
     // SQLite_OpenHelper helper= new SQLite_OpenHelper(getApplicationContext());
     java.util.List<String> item=null;
@@ -23,8 +24,8 @@ public class Notas extends AppCompatActivity {
     }
 
     private void mostrarNotas(){
-        SQLite_OpenHelper helper= new SQLite_OpenHelper(this);
-        Cursor c= helper.getCursor();
+
+        Cursor c = helper.getCursor();
         item = new ArrayList<String>();
         int idCurso;
         int idEstudiante;

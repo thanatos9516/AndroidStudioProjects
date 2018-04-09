@@ -1,3 +1,7 @@
 <resources>
-    <string name="app_name">Examen1</string>
+    <string name="app_name">JoseMolina</string>
+    <string name="buton2_menu_opt1">JoseMolina</string>
+    <string name="buton2_menu_opt2">JoseMolina</string>
+    <string name="buton2_menu_opt3">JoseMolina</string>
+
 </resources>

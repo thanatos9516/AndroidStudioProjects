@@ -2,29 +2,21 @@ package com.example.thanatos.examen1;
 
 import android.app.Activity;
 import android.content.Intent;
-import android.database.sqlite.SQLiteOpenHelper;
-import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
+import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
-import android.util.Log;
+import android.os.Bundle;
 import android.view.View;
-import android.view.Menu;
-import android.view.MenuItem;
+import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ProgressBar;
 import android.widget.TextView;
-import android.os.Handler;
-//import java.util.logging.Handler;
-import java.util.logging.LogRecord;
+import android.widget.Toast;
 
 public class MainActivity extends Activity {
-
     private ProgressBar progressBar;
     private int progressStatus=0;
     private TextView textView;
     private Handler handler= new Handler();
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -42,30 +34,26 @@ public class MainActivity extends Activity {
                     handler.post(new Runnable() {
                         public void run() {
                             progressBar.setProgress(progressStatus);
-                            textView.setText(progressStatus + "%" );
+                            textView.setText(progressStatus + "/" + progressBar.getMax());
                         }
                     });
                     try {
-                        Thread.sleep(50);
+                        Thread.sleep(5);
 
 
                     } catch (InterruptedException e) {
                         //e.printStackTrace();
                     }
                 }
+//Si es primera vez descomentar
+                DataBaseHelper db = new DataBaseHelper(getApplicationContext());
+                db.ingresarEstudiante(new Estudiante(123,"José Molina","123"));
+                db.ingresarEstudiante(new Estudiante(124,"Ginnette Cascante","123"));
+                db.ingresarEstudiante(new Estudiante(125,"Gladys Cardoza Cruz","123"));
 
-
-                SQLite_OpenHelper db= new SQLite_OpenHelper(getApplicationContext());
-
-                db.ingresarUsuario(new Usuario(123,"123"));
-
-                db.ingresarEstudiante(604240231, "- Jose Molina Cascante");
-                db.ingresarEstudiante(503830818, "- Gladys Cardoza Cruz");
-                db.ingresarEstudiante(503830333, "- Ginnette Cascante Prado");
-
-                db.agregarCurso("Moviles");
-                db.agregarCurso("Interfaces");
-                db.agregarCurso("Ingenieria de Sistemas");
+                db.ingresarCurso("Moviles");
+                db.ingresarCurso("Web");
+                db.ingresarCurso("Python");
 
                 db.ingresarNota(1, 123, 89);
                 db.ingresarNota(2,123,89);
@@ -79,6 +67,7 @@ public class MainActivity extends Activity {
                 db.ingresarNota(2,125,89);
                 db.ingresarNota(2,125,89);
 
+
                 Intent nuevoFrom= new Intent(MainActivity.this, Login.class);
                 startActivity(nuevoFrom);
 
@@ -88,7 +77,5 @@ public class MainActivity extends Activity {
 
             }
         }).start();
-
     }
-
 }

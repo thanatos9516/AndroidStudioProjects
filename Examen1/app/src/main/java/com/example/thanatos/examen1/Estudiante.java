@@ -1,26 +1,22 @@
 package com.example.thanatos.examen1;
 
-/**
- * Created by Thanatos on 8/4/2018.
- */
-
 public class Estudiante {
-    private int IdEstudiante;
+    private int usuario;
     private String Nombre;
-    public Estudiante(){}
+    private String clave;
 
-    public Estudiante(int id, String nombre) {
-        this.IdEstudiante=id;
+    public Estudiante(int usuario, String nombre, String clave) {
+        this.usuario=usuario;
         this.Nombre=nombre;
-
+        this.clave=clave;
     }
 
-    public int getIdEstudiante() {
-        return IdEstudiante;
+    public int getUsuario() {
+        return usuario;
     }
 
-    public void setIdEstudiante(int idEstudiante) {
-        IdEstudiante = idEstudiante;
+    public void setUsuario(int usuario) {
+        this.usuario = usuario;
     }
 
     public String getNombre() {
@@ -31,9 +27,17 @@ public class Estudiante {
         Nombre = nombre;
     }
 
+    public String getClave() {
+        return clave;
+    }
+
+    public void setClave(String clave) {
+        this.clave = clave;
+    }
+
     @Override
     public String toString() {
-        return  "Ced: =" + IdEstudiante +
-                ", Nombre=" + Nombre ;
+        return "Usuario: " + usuario +
+                "\nNombre: " + Nombre ;
     }
 }
