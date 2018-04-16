@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/LineaFecha"
+        android:layout_width="209dp"
+        android:layout_height="57dp"
+        android:orientation="vertical"
+        tools:layout_editor_absoluteX="66dp"
+        tools:layout_editor_absoluteY="1dp">
+
+        <EditText
+            android:id="@+id/txtFecha"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="@string/txtFecha"
+            android:inputType="date"
+            android:textAlignment="center" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/LineaOrigen"
+        android:layout_width="151dp"
+        android:layout_height="57dp"
+        android:orientation="vertical"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="67dp">
+
+        <EditText
+            android:id="@+id/txtOrigen"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="@string/txtxOrigen"
+            android:inputType="textPersonName" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/LineaDestino"
+        android:layout_width="163dp"
+        android:layout_height="58dp"
+        android:orientation="vertical"
+        tools:layout_editor_absoluteX="191dp"
+        tools:layout_editor_absoluteY="67dp">
+
+        <EditText
+            android:id="@+id/txtDestino"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="@string/txtDestino"
+            android:inputType="text" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/LineaCantidad"
+        android:layout_width="67dp"
+        android:layout_height="55dp"
+        android:orientation="vertical"
+        tools:layout_editor_absoluteX="66dp"
+        tools:layout_editor_absoluteY="149dp">
+
+        <EditText
+            android:id="@+id/txtCupo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="@string/txtCupo"
+            android:inputType="number"
+            android:textAlignment="center" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/LineaVuelta"
+        android:layout_width="110dp"
+        android:layout_height="54dp"
+        android:orientation="vertical"
+        tools:layout_editor_absoluteX="191dp"
+        tools:layout_editor_absoluteY="149dp">
+
+        <EditText
+            android:id="@+id/txtRegreso"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="@string/txtRegreso"
+            android:inputType="textPersonName" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/LineaComunidad"
+        android:layout_width="109dp"
+        android:layout_height="54dp"
+        android:orientation="vertical"
+        tools:layout_editor_absoluteX="138dp"
+        tools:layout_editor_absoluteY="214dp">
+
+        <EditText
+            android:id="@+id/txtComunidad"
+            android:layout_width="139dp"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="@string/txtComunidad"
+            android:inputType="textPersonName" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/LineaMapa"
+        android:layout_width="63dp"
+        android:layout_height="32dp"
+        android:orientation="vertical"
+        tools:layout_editor_absoluteX="161dp"
+        tools:layout_editor_absoluteY="279dp">
+
+        <TextView
+            android:id="@+id/Ruta"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Ruta" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/LineaMapa"
+        android:layout_width="268dp"
+        android:layout_height="135dp"
+        android:orientation="vertical"
+        tools:layout_editor_absoluteX="58dp"
+        tools:layout_editor_absoluteY="311dp">
+
+        <com.google.android.gms.maps.MapView
+            android:id="@+id/mapView"
+            android:layout_width="match_parent"
+            android:layout_height="127dp"
+            tools:layout_editor_absoluteX="75dp"
+            tools:layout_editor_absoluteY="330dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/LineaPedir"
+        android:layout_width="74dp"
+        android:layout_height="59dp"
+        android:orientation="vertical"
+        tools:layout_editor_absoluteX="155dp"
+        tools:layout_editor_absoluteY="446dp">
+
+        <Button
+            android:id="@+id/btnPedir"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/btnPedir" />
+    </LinearLayout>
+
+</android.support.constraint.ConstraintLayout>

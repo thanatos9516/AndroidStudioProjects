@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">AppCarpooling</string>
+    <string name="action_settings">Settings</string>
+    <string name="img_login">imagenLogin</string>
+    <string name="lbInicio">Iniciar Sesión</string>
+    <string name="txtCorreo">Ingrese Email</string>
+    <string name="txtClave">Ingrese Clave</string>
+    <string name="btnIngresar">Ingresar</string>
+    <string name="btnRegistro">Registro</string>
+    <string name="txtNombre">Ingrese Nombre</string>
+    <string name="txtCedula">Ingrese Cedula</string>
+    <string name="txtApellido1">Apellido 1</string>
+    <string name="txtApellido2">Apellido 2</string>
+    <string name="txtNacionalidad">Ingrese Nacionalidad</string>
+    <string name="btnPedir">Pedir</string>
+    <string name="btnDar">Dar</string>
+    <string name="txtFecha">Ingrese la fecha</string>
+    <string name="txtxOrigen">Ingrese el origen</string>
+    <string name="txtDestino">Ingrese el Destino</string>
+    <string name="txtCupo">Cupo</string>
+    <string name="txtRegreso">De regreso?</string>
+    <string name="txtComunidad">Comunidad?</string>
+</resources>

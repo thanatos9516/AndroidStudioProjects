@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.anyulieth.appcarpooling.RegistroActivity">
+
+    <LinearLayout
+        android:id="@+id/Linea_Cedula"
+        android:layout_width="wrap_content"
+        android:layout_height="47dp"
+        android:orientation="vertical"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="48dp">
+
+        <EditText
+            android:id="@+id/txtCedula"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:ems="10"
+            android:hint="@string/txtCedula"
+            android:inputType="textPassword"
+            android:singleLine="true"
+            android:textColor="@android:color/background_dark" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/Linea_Nombre"
+        android:layout_width="wrap_content"
+        android:layout_height="47dp"
+        android:orientation="vertical"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="103dp">
+
+        <EditText
+            android:id="@+id/txtNombre"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:ems="10"
+            android:hint="@string/txtNombre"
+            android:inputType="textPassword"
+            android:singleLine="true"
+            android:textColor="@android:color/background_dark" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/Linea_Apellido1"
+        android:layout_width="wrap_content"
+        android:layout_height="47dp"
+        android:orientation="vertical"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="158dp"
+        tools:ignore="MissingConstraints">
+
+        <EditText
+            android:id="@+id/txtApellido1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:ems="10"
+            android:hint="@string/txtApellido1"
+            android:inputType="textPassword"
+            android:singleLine="true"
+            android:textColor="@android:color/background_dark" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/Linea_Apellido2"
+        android:layout_width="wrap_content"
+        android:layout_height="47dp"
+        android:orientation="vertical"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="214dp"
+        tools:ignore="MissingConstraints">
+
+        <EditText
+            android:id="@+id/txtApellido2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:ems="10"
+            android:hint="@string/txtApellido2"
+            android:inputType="textPassword"
+            android:singleLine="true"
+            android:textColor="@android:color/background_dark" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/Linea_Nacionalidad"
+        android:layout_width="wrap_content"
+        android:layout_height="47dp"
+        android:orientation="vertical"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="269dp"
+        tools:ignore="MissingConstraints">
+
+        <EditText
+            android:id="@+id/txtNacionalidad"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:ems="10"
+            android:hint="@string/txtNacionalidad"
+            android:inputType="textPassword"
+            android:singleLine="true"
+            android:textColor="@android:color/background_dark" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/Linea_Correo"
+        android:layout_width="wrap_content"
+        android:layout_height="47dp"
+        android:orientation="vertical"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="324dp"
+        tools:ignore="MissingConstraints">
+
+        <EditText
+            android:id="@+id/txtCorreo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:ems="10"
+            android:hint="@string/txtCorreo"
+            android:inputType="textPassword"
+            android:singleLine="true"
+            android:textColor="@android:color/background_dark" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/Linea_Clave"
+        android:layout_width="wrap_content"
+        android:layout_height="47dp"
+        android:orientation="vertical"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="380dp"
+        tools:ignore="MissingConstraints">
+
+        <EditText
+            android:id="@+id/txtClave"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:ems="10"
+            android:hint="@string/txtClave"
+            android:inputType="textPassword"
+            android:singleLine="true"
+            android:textColor="@android:color/background_dark" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/Linea_BtnRegistrar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clickable="false"
+        android:gravity="center"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Linea_Clave"
+        app:layout_constraintVertical_bias="0.25">
+
+        <Button
+            android:id="@+id/btnRegistro"
+            style="@style/Widget.AppCompat.Button.Colored"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:text="@string/btnRegistro" />
+    </LinearLayout>
+
+</android.support.constraint.ConstraintLayout>
